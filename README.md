@@ -14,7 +14,13 @@ TokenTruth is not a compression tool. It's the audit layer that sits on top of t
 
 ## Install
 
-As a standalone CLI:
+From crates.io:
+
+```bash
+cargo install tokentruth
+```
+
+Or from git (latest, unreleased changes):
 
 ```bash
 cargo install --git https://github.com/arsyadal/tokentruth
