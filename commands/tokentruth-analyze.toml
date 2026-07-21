@@ -1,0 +1,2 @@
+description = "Analyze token usage for a Claude Code session in this project"
+prompt = "Check `which tokentruth` first; if missing, tell the user to run `cargo install --git https://github.com/arsyadal/tokentruth` and stop. Otherwise run `tokentruth analyze {{args}}` in the current project directory (args may be empty, or `--session <uuid>`, or `--project <path>`) and report the resulting token breakdown table exactly as printed, with no rounding or reinterpretation."

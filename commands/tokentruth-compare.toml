@@ -1,0 +1,2 @@
+description = "Compare two Claude Code sessions' token usage (e.g. before/after enabling a tool)"
+prompt = "Check `which tokentruth` first; if missing, tell the user to run `cargo install --git https://github.com/arsyadal/tokentruth` and stop. Otherwise run `tokentruth compare {{args}}` (expects `--before <uuid> --after <uuid>`, optionally `--project <path>`) and report the delta table exactly as printed. If the user hasn't given two session UUIDs, ask for them or help locate them under `~/.claude/projects/<project>/*.jsonl` before running anything."

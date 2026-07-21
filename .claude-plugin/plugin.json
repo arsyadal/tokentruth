@@ -1,0 +1,9 @@
+{
+  "name": "tokentruth",
+  "version": "0.1.0",
+  "description": "Independent audit of AI coding agent token usage, computed from real Claude Code session transcripts — not self-reported dashboards.",
+  "author": {
+    "name": "arsyadal",
+    "url": "https://github.com/arsyadal"
+  }
+}

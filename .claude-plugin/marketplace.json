@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "tokentruth",
+  "description": "Independent token-usage audit for Claude Code, computed from real session transcripts, not marketing numbers.",
+  "owner": {
+    "name": "arsyadal",
+    "url": "https://github.com/arsyadal"
+  },
+  "plugins": [
+    {
+      "name": "tokentruth",
+      "description": "Audit real token/cost usage from Claude Code transcripts. Not a compression tool — reads what actually happened.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

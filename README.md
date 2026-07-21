@@ -14,10 +14,25 @@ TokenTruth is not a compression tool. It's the audit layer that sits on top of t
 
 ## Install
 
+As a standalone CLI:
+
+```bash
+cargo install --git https://github.com/arsyadal/tokentruth
+```
+
+Or from a clone:
+
 ```bash
 git clone <repo-url> tokentruth
 cd tokentruth
 cargo install --path .
+```
+
+As a Claude Code plugin (adds `/tokentruth-analyze`, `/tokentruth-compare`, `/tokentruth-cost`, and lets Claude reach for the CLI on its own when you ask about token usage or want to check a savings claim — still shells out to the same binary above, install that first):
+
+```
+/plugin marketplace add arsyadal/tokentruth
+/plugin install tokentruth@tokentruth
 ```
 
 ## Usage

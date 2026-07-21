@@ -1,0 +1,2 @@
+description = "Estimate USD cost across one or more models for a Claude Code session"
+prompt = "Check `which tokentruth` first; if missing, tell the user to run `cargo install --git https://github.com/arsyadal/tokentruth` and stop. Otherwise run `tokentruth cost {{args}}` (optionally `--session <uuid> --models id1,id2 --project <path>`) and report the cost table exactly as printed."
