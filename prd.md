@@ -189,7 +189,7 @@ tokentruth export --session <uuid> --format json|csv
 - [ ] Breakdown token: input / output / cache read / cache write
 - [ ] Perhitungan biaya untuk model-model utama saat rilis (Sonnet, Opus, Haiku; GPT lini terbaru; Gemini)
 - [ ] Command `analyze` dan `compare` (CLI table output)
-- [ ] README dengan demo GIF + 1 studi kasus nyata (audit terhadap sesi ber-Caveman/RTK milik sendiri)
+- [x] README dengan demo GIF + 1 studi kasus nyata (audit terhadap sesi ber-Caveman/RTK milik sendiri)
 - [ ] Deteksi & warning soal retensi log 30 hari
 
 ### 7.2 Fase 2 (v0.2–0.3)
