@@ -1,5 +1,9 @@
 # TokenTruth
 
+[![CI](https://github.com/arsyadal/tokentruth/actions/workflows/ci.yml/badge.svg)](https://github.com/arsyadal/tokentruth/actions/workflows/ci.yml)
+[![crates.io](https://img.shields.io/crates/v/tokentruth.svg)](https://crates.io/crates/tokentruth)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Independent verification of AI coding agent token-savings claims — computed from raw session transcripts, not estimates, not marketing numbers.
 
 You installed five tools that claim to save tokens. How much did they *actually* save in your sessions, calculated from logs that really happened?
