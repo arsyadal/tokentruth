@@ -242,12 +242,12 @@ Catatan: hindari menjadikan stars sebagai tujuan utama produk — treat sebagai 
 
 ---
 
-## 11. Pertanyaan Terbuka
+## 11. Pertanyaan Terbuka (diputuskan)
 
-- Apakah perlu dukungan multi-session aggregation di MVP, atau cukup single-session dulu?
-- Apakah "reasoning tokens" konsisten tersedia di transcript Claude Code untuk semua model, atau perlu fallback?
-- Lisensi: MIT/Apache 2.0 (ikuti konvensi RTK) — perlu diputuskan sebelum commit pertama.
-- Nama final: konfirmasi ketersediaan `tokentruth` di GitHub, crates.io, dan domain sebelum mulai coding.
+- Multi-session aggregation: **tidak** di MVP. Single-session per `analyze`, pairwise via `compare`. Cukup untuk semua kasus yang sudah diuji (case study, A/B trials); revisit di Fase 2 kalau ada demand nyata.
+- Reasoning tokens: **tersedia, best-effort**. Parser cek field `thinking_tokens` lalu fallback ke `reasoning_tokens` di `usage`; kalau tidak ada di transcript, `None` — tidak fatal, tidak di-fake.
+- Lisensi: **MIT**. Sudah di `Cargo.toml` dan `LICENSE` sejak commit pertama.
+- Nama final: **`tokentruth` tersedia dan sudah dipakai** — GitHub (`arsyadal/tokentruth`), crates.io (`tokentruth` v0.1.0, live).
 
 ---
 
