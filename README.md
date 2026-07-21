@@ -6,6 +6,8 @@ You installed five tools that claim to save tokens. How much did they *actually*
 
 TokenTruth reads Claude Code's own transcript files (`~/.claude/projects/**/*.jsonl`) and reconstructs real token usage per category: input, output, cache write, cache read. Everything runs locally — no network calls, read-only, your data never leaves your machine.
 
+![tokentruth analyze, cost, and compare against real session transcripts](assets/demo.gif)
+
 ## Why
 
 Compression tools (Caveman, RTK, Ponytail, Headroom, ...) mostly attack output tokens. Input tokens are usually the bulk of the bill (agentic sessions run roughly 20-25:1 input:output). Marketing numbers are self-reported and rarely audited. An independent JetBrains benchmark found Caveman's claimed 65% savings landed closer to 8.5% in a non-cherry-picked, output-only measurement.
