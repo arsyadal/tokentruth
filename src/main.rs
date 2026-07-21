@@ -34,8 +34,6 @@ enum Command {
         #[arg(long)]
         session: Option<String>,
         #[arg(long)]
-        breakdown: bool,
-        #[arg(long)]
         project: Option<PathBuf>,
     },
     /// Compare two sessions (e.g. before/after enabling a compression tool)
@@ -71,11 +69,7 @@ fn main() -> Result<()> {
     let cli = Cli::parse();
 
     match cli.command {
-        Command::Analyze {
-            session,
-            breakdown: _,
-            project,
-        } => {
+        Command::Analyze { session, project } => {
             let project = resolve_project(project)?;
             warn_on_retention();
             let path = find_transcript(&project, session.as_deref())?;

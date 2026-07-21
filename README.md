@@ -41,6 +41,41 @@ tokentruth export --session <uuid> --format json|csv
 
 All commands default to the current directory's project. Pass `--project <path>` to target another project's transcripts.
 
+### Sample output
+
+```
+$ tokentruth analyze
+Session 53175772-1b46-418f-aec6-549a58265fdd  (2026-07-20 23:32:27 UTC -> 2026-07-21 02:47:22 UTC)
+Model: claude-sonnet-5
+Turns: 268
+
+┌─────────────┬──────────┐
+│ Category    ┆ Tokens   │
+╞═════════════╪══════════╡
+│ Input       ┆ 290      │
+├╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌┤
+│ Output      ┆ 103454   │
+├╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌┤
+│ Cache write ┆ 611840   │
+├╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌┤
+│ Cache read  ┆ 13467392 │
+├╌╌╌╌╌╌╌╌╌╌╌╌╌┼╌╌╌╌╌╌╌╌╌╌┤
+│ Total       ┆ 14182976 │
+└─────────────┴──────────┘
+```
+
+### Finding a session UUID
+
+`analyze`/`cost`/`export` default to the most-recently-modified session in the current project, so most of the time you don't need a UUID at all. When you do (e.g. picking a specific past session for `compare`), transcripts live at:
+
+```bash
+ls ~/.claude/projects/<cwd-with-slashes-replaced-by-dashes>/*.jsonl
+# e.g. for /Users/you/myproject:
+ls ~/.claude/projects/-Users-you-myproject/*.jsonl
+```
+
+Each `.jsonl` filename (minus the extension) is the session UUID.
+
 ## Case study (real data)
 
 Ran `tokentruth analyze --breakdown` against a real ~4hr Claude Code session (273 turns, no compression tool active):
