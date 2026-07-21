@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Independent verification of AI coding agent token-savings claims, computed from raw session transcripts."
 license = "MIT"
+repository = "https://github.com/arsyadal/tokentruth"
 
 [[bin]]
 name = "tokentruth"
